@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY','')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-lisaloudnes-boutiqueado-v8aegnkyymo.ws-eu111.gitpod.io',
 '8000-lisaloudnes-boutiqueado-v8aegnkyymo.ws-eu114.gitpod.io', 'boutique-ado-lj-a51d61110508.herokuapp.com', 'localhost']
