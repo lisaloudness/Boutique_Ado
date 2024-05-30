@@ -21,13 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY','')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-lisaloudnes-boutiqueado-v8aegnkyymo.ws-eu111.gitpod.io',
-'8000-lisaloudnes-boutiqueado-v8aegnkyymo.ws-eu114.gitpod.io', 'boutique-ado-lj-a51d61110508.herokuapp.com', 'localhost']
+    '8000-lisaloudnes-boutiqueado-v8aegnkyymo.ws-eu114.gitpod.io', 'boutique-ado-lj-a51d61110508.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -50,10 +50,10 @@ INSTALLED_APPS = [
     'profiles',
 
 
-# other
-'crispy_forms',
-'storages'
-]
+    # other
+    'crispy_forms',
+    'storages'
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,7 +81,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -132,8 +132,6 @@ else:
         }
     }
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -149,7 +147,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    }
 ]
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
@@ -219,4 +217,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
